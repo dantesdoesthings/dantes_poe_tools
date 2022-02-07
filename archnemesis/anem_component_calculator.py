@@ -38,6 +38,7 @@ def main(take_input: bool = False):
 
 
 def setup():
+    """Loads the formulas and the name set from resource files."""
     global component_formulas
     global all_names
     with open('resources/component_formulas.json') as json_file:
@@ -50,12 +51,12 @@ def setup():
 def get_subcomponents(cfs: typing.Dict[str, typing.List[str]], request: str) -> typing.Dict[str, dict]:
     """Creates a component tree of all subcomponents of a particular component.
 
-    A dictionary of dictionaries is returned, with each component showing its subcomponents.
-    Basic subcomponents show an empty dictionary.
+    Looks recursively through a component formula lookup dictionary to find all basic components.
 
     :param cfs: The component formulas as a dictionary of lists
     :param request: The component to look up information for.
-    :return:
+    :return: A dictionary of dictionaries is returned, with each component showing its subcomponents.
+        Basic subcomponents show an empty dictionary.
     """
     result = {}
     if request in cfs:
@@ -69,6 +70,12 @@ def get_subcomponents(cfs: typing.Dict[str, typing.List[str]], request: str) -> 
 
 
 def flatten_component_tree(tree: dict) -> list:
+    """Flattens a component tree into a list of its final leaves.
+
+    :param tree: A dictionary of dictionaries any number of levels deep as returned by get_subcomponents.
+    :return: A list of all entries in the input tree that had no lower-level components,
+        as represented by containing only an empty dictionary for a value.
+    """
     result = []
     for k, v in tree.items():
         tmp = flatten_component_tree(v)
