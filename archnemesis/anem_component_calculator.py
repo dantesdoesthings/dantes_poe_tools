@@ -72,6 +72,9 @@ def get_subcomponents(cfs: typing.Dict[str, typing.List[str]], request: str) -> 
 def flatten_component_tree(tree: dict) -> list:
     """Flattens a component tree into a list of its final leaves.
 
+    Traverses the tree recursively until it meets terminating nodes, then collects all those terminating nodes
+    into a list.
+
     :param tree: A dictionary of dictionaries any number of levels deep as returned by get_subcomponents.
     :return: A list of all entries in the input tree that had no lower-level components,
         as represented by containing only an empty dictionary for a value.
