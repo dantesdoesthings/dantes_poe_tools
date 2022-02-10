@@ -1,0 +1,436 @@
+{
+  "Treant Horde": {},
+  "Shakari-touched": {},
+  "Flame Strider": {
+    "Abberath-touched": {
+      "Kitava-touched": {}
+    }
+  },
+  "Mana Siphoner": {
+    "Innocence-touched": {}
+  },
+  "Berserker": {
+    "Executioner": {
+      "Empowering Minions": {
+        "Lunaris-touched": {
+          "Innocence-touched": {}
+        },
+        "Solaris-touched": {
+          "Innocence-touched": {}
+        }
+      },
+      "Tukohama-touched": {
+        "Kitava-touched": {}
+      }
+    },
+    "Crystal-skinned": {}
+  },
+  "Brine King-touched": {},
+  "Dynamo": {
+    "Heralding Minions": {
+      "Brine King-touched": {}
+    },
+    "Mana Siphoner": {
+      "Innocence-touched": {}
+    }
+  },
+  "Abberath-touched": {
+    "Kitava-touched": {}
+  },
+  "Solaris-touched": {
+    "Innocence-touched": {}
+  },
+  "Gargantuan": {
+    "Empowering Minions": {
+      "Lunaris-touched": {
+        "Innocence-touched": {}
+      },
+      "Solaris-touched": {
+        "Innocence-touched": {}
+      }
+    },
+    "Rejuvenating": {
+      "Crystal-skinned": {},
+      "Abberath-touched": {
+        "Kitava-touched": {}
+      }
+    },
+    "Soul Eater": {
+      "Shakari-touched": {}
+    }
+  },
+  "Lunaris-touched": {
+    "Innocence-touched": {}
+  },
+  "Evocationist": {
+    "Empowered Elements": {}
+  },
+  "Corpse Detonator": {
+    "Arakaali-touched": {},
+    "Kitava-touched": {}
+  },
+  "Innocence-touched": {},
+  "Crystal-skinned": {},
+  "Executioner": {
+    "Empowering Minions": {
+      "Lunaris-touched": {
+        "Innocence-touched": {}
+      },
+      "Solaris-touched": {
+        "Innocence-touched": {}
+      }
+    },
+    "Tukohama-touched": {
+      "Kitava-touched": {}
+    }
+  },
+  "Chaosweaver": {
+    "Hexer": {
+      "Temporal Bubble": {},
+      "Effigy": {}
+    },
+    "Corrupter": {
+      "Effigy": {},
+      "Kitava-touched": {}
+    },
+    "Empowered Elements": {}
+  },
+  "Soul Conduit": {
+    "Soul Eater": {
+      "Shakari-touched": {}
+    },
+    "Mirror Image": {
+      "Innocence-touched": {}
+    }
+  },
+  "Arcane Buffer": {
+    "Heralding Minions": {
+      "Brine King-touched": {}
+    },
+    "Temporal Bubble": {}
+  },
+  "Heralding Minions": {
+    "Brine King-touched": {}
+  },
+  "Corrupter": {
+    "Effigy": {},
+    "Kitava-touched": {}
+  },
+  "Consecrator": {
+    "Mana Siphoner": {
+      "Innocence-touched": {}
+    },
+    "Invulnerable": {
+      "Lunaris-touched": {
+        "Innocence-touched": {}
+      },
+      "Solaris-touched": {
+        "Innocence-touched": {}
+      }
+    }
+  },
+  "Assassin": {
+    "Trickster": {},
+    "Arakaali-touched": {}
+  },
+  "Steel-infused": {
+    "Treant Horde": {},
+    "Empowered Elements": {}
+  },
+  "Trickster": {},
+  "Vampiric": {
+    "Assassin": {
+      "Trickster": {},
+      "Arakaali-touched": {}
+    },
+    "Rejuvenating": {
+      "Crystal-skinned": {},
+      "Abberath-touched": {
+        "Kitava-touched": {}
+      }
+    }
+  },
+  "Empowered Elements": {},
+  "Invulnerable": {
+    "Lunaris-touched": {
+      "Innocence-touched": {}
+    },
+    "Solaris-touched": {
+      "Innocence-touched": {}
+    }
+  },
+  "Overcharged": {
+    "Trickster": {},
+    "Necromancer": {
+      "Empowering Minions": {
+        "Lunaris-touched": {
+          "Innocence-touched": {}
+        },
+        "Solaris-touched": {
+          "Innocence-touched": {}
+        }
+      },
+      "Soul Eater": {
+        "Shakari-touched": {}
+      },
+      "Corpse Detonator": {
+        "Arakaali-touched": {},
+        "Kitava-touched": {}
+      }
+    }
+  },
+  "Ice Prison": {
+    "Brine King-touched": {}
+  },
+  "Frostweaver": {
+    "Frost Strider": {
+      "Lunaris-touched": {
+        "Innocence-touched": {}
+      }
+    },
+    "Evocationist": {
+      "Empowered Elements": {}
+    }
+  },
+  "Frenzied": {
+    "Executioner": {
+      "Empowering Minions": {
+        "Lunaris-touched": {
+          "Innocence-touched": {}
+        },
+        "Solaris-touched": {
+          "Innocence-touched": {}
+        }
+      },
+      "Tukohama-touched": {
+        "Kitava-touched": {}
+      }
+    },
+    "Abberath-touched": {
+      "Kitava-touched": {}
+    }
+  },
+  "Toxic": {
+    "Entangler": {
+      "Arakaali-touched": {},
+      "Shakari-touched": {}
+    },
+    "Treant Horde": {}
+  },
+  "Entangler": {
+    "Arakaali-touched": {},
+    "Shakari-touched": {}
+  },
+  "Stormweaver": {
+    "Evocationist": {
+      "Empowered Elements": {}
+    },
+    "Storm Strider": {
+      "Brine King-touched": {}
+    }
+  },
+  "Drought Bringer": {
+    "Shakari-touched": {}
+  },
+  "Juggernaut": {
+    "Temporal Bubble": {},
+    "Invulnerable": {
+      "Lunaris-touched": {
+        "Innocence-touched": {}
+      },
+      "Solaris-touched": {
+        "Innocence-touched": {}
+      }
+    }
+  },
+  "Bloodletter": {
+    "Entangler": {
+      "Arakaali-touched": {},
+      "Shakari-touched": {}
+    },
+    "Corrupter": {
+      "Effigy": {},
+      "Kitava-touched": {}
+    }
+  },
+  "Deadeye": {
+    "Assassin": {
+      "Trickster": {},
+      "Arakaali-touched": {}
+    },
+    "Drought Bringer": {
+      "Shakari-touched": {}
+    }
+  },
+  "Echoist": {
+    "Trickster": {},
+    "Hexer": {
+      "Temporal Bubble": {},
+      "Effigy": {}
+    },
+    "Mirror Image": {
+      "Innocence-touched": {}
+    }
+  },
+  "Effigy": {},
+  "Permafrost": {
+    "Ice Prison": {
+      "Brine King-touched": {}
+    },
+    "Crystal-skinned": {}
+  },
+  "Kitava-touched": {},
+  "Empowering Minions": {
+    "Lunaris-touched": {
+      "Innocence-touched": {}
+    },
+    "Solaris-touched": {
+      "Innocence-touched": {}
+    }
+  },
+  "Frost Strider": {
+    "Lunaris-touched": {
+      "Innocence-touched": {}
+    }
+  },
+  "Incendiary": {
+    "Corpse Detonator": {
+      "Arakaali-touched": {},
+      "Kitava-touched": {}
+    },
+    "Magma Barrier": {
+      "Solaris-touched": {
+        "Innocence-touched": {}
+      },
+      "Tukohama-touched": {
+        "Kitava-touched": {}
+      }
+    }
+  },
+  "Malediction": {
+    "Drought Bringer": {
+      "Shakari-touched": {}
+    },
+    "Effigy": {}
+  },
+  "Bonebreaker": {
+    "Magma Barrier": {
+      "Solaris-touched": {
+        "Innocence-touched": {}
+      },
+      "Tukohama-touched": {
+        "Kitava-touched": {}
+      }
+    },
+    "Tukohama-touched": {
+      "Kitava-touched": {}
+    }
+  },
+  "Magma Barrier": {
+    "Solaris-touched": {
+      "Innocence-touched": {}
+    },
+    "Tukohama-touched": {
+      "Kitava-touched": {}
+    }
+  },
+  "Hasted": {
+    "Frost Strider": {
+      "Lunaris-touched": {
+        "Innocence-touched": {}
+      }
+    },
+    "Flame Strider": {
+      "Abberath-touched": {
+        "Kitava-touched": {}
+      }
+    },
+    "Storm Strider": {
+      "Brine King-touched": {}
+    }
+  },
+  "Necromancer": {
+    "Empowering Minions": {
+      "Lunaris-touched": {
+        "Innocence-touched": {}
+      },
+      "Solaris-touched": {
+        "Innocence-touched": {}
+      }
+    },
+    "Soul Eater": {
+      "Shakari-touched": {}
+    },
+    "Corpse Detonator": {
+      "Arakaali-touched": {},
+      "Kitava-touched": {}
+    }
+  },
+  "Bombardier": {
+    "Necromancer": {
+      "Empowering Minions": {
+        "Lunaris-touched": {
+          "Innocence-touched": {}
+        },
+        "Solaris-touched": {
+          "Innocence-touched": {}
+        }
+      },
+      "Soul Eater": {
+        "Shakari-touched": {}
+      },
+      "Corpse Detonator": {
+        "Arakaali-touched": {},
+        "Kitava-touched": {}
+      }
+    }
+  },
+  "Sentinel": {
+    "Treant Horde": {},
+    "Ice Prison": {
+      "Brine King-touched": {}
+    },
+    "Invulnerable": {
+      "Lunaris-touched": {
+        "Innocence-touched": {}
+      },
+      "Solaris-touched": {
+        "Innocence-touched": {}
+      }
+    }
+  },
+  "Soul Eater": {
+    "Shakari-touched": {}
+  },
+  "Flameweaver": {
+    "Flame Strider": {
+      "Abberath-touched": {
+        "Kitava-touched": {}
+      }
+    },
+    "Evocationist": {
+      "Empowered Elements": {}
+    }
+  },
+  "Tukohama-touched": {
+    "Kitava-touched": {}
+  },
+  "Hexer": {
+    "Temporal Bubble": {},
+    "Effigy": {}
+  },
+  "Temporal Bubble": {},
+  "Rejuvenating": {
+    "Crystal-skinned": {},
+    "Abberath-touched": {
+      "Kitava-touched": {}
+    }
+  },
+  "Storm Strider": {
+    "Brine King-touched": {}
+  },
+  "Arakaali-touched": {},
+  "Mirror Image": {
+    "Innocence-touched": {}
+  }
+}

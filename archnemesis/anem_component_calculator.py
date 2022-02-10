@@ -4,13 +4,31 @@ import typing
 
 component_formulas = {}
 all_names = set()
+family_tree = {}
 
 
-def main(take_input: bool = False):
+def main():
     setup()
     print('Valid names: ')
     print(json.dumps(sorted(list(all_names)), indent=2))
 
+    take_input = True
+    while take_input:
+        tool = input('Which tool would you like to use? "Recipe" or "Usage"? Or you can "quit"').lower()
+        if tool == 'recipe':
+            take_input = False
+            recipe_loop()
+        elif tool == 'usage':
+            take_input = False
+            usage_loop()
+        elif tool == 'quit':
+            take_input = False
+        else:
+            print('That command was not recognized.')
+
+
+def recipe_loop():
+    take_input = True
     while take_input:
         request = input('Request a breakdown by entering the name of an Archnemesis modifier, or type "quit":')
         if request in all_names:
@@ -37,15 +55,31 @@ def main(take_input: bool = False):
             take_input = False
 
 
+def usage_loop():
+    take_input = True
+    while take_input:
+        request = input('Request the usages by entering the name of an Archnemesis modifier, or type "quit":')
+        if request in all_names:
+            print(json.dumps(family_tree[request], indent=2))
+        elif request != 'quit':
+            print('I\'m sorry, that is not a valid name from the list. Please try again.')
+        else:
+            take_input = False
+
+
 def setup():
     """Loads the formulas and the name set from resource files."""
     global component_formulas
     global all_names
+    global family_tree
     with open('resources/component_formulas.json') as json_file:
         component_formulas = json.load(json_file)
 
     with open('resources/all_components.json') as json_file:
         all_names = set(json.load(json_file))
+
+    with open('resources/family_tree.json') as json_file:
+        family_tree = json.load(json_file)
 
 
 def get_subcomponents(cfs: typing.Dict[str, typing.List[str]], request: str) -> typing.Dict[str, dict]:
@@ -89,5 +123,20 @@ def flatten_component_tree(tree: dict) -> list:
     return result
 
 
+def get_parents(comp_formulas: dict, names: set = None) -> dict:
+    """
+    Finds the chain of parents of all subcomponents,
+    making a dict of all components that have the given key as a sub-component.
+    """
+    if names is None:
+        names = flatten_component_tree(comp_formulas)
+    result = {k: {} for k in names}
+    for name in names:
+        for k, v in comp_formulas.items():
+            if name in v:
+                result[name][k] = result[k]
+    return result
+
+
 if __name__ == '__main__':
-    main(True)
+    main()
