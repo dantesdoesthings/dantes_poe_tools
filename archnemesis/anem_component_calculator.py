@@ -1,10 +1,12 @@
 import json
 import typing
+import re
 
 
 component_formulas = {}
 all_names = set()
 family_tree = {}
+name_lookup_table = {}
 
 
 def main():
@@ -14,7 +16,7 @@ def main():
 
     take_input = True
     while take_input:
-        tool = input('Which tool would you like to use? "Recipe" or "Usage"? Or you can "quit"').lower()
+        tool = clean_input(input('Which tool would you like to use? "Recipe" or "Usage"? Or you can "quit"\n'))
         if tool == 'recipe':
             take_input = False
             recipe_loop()
@@ -30,12 +32,13 @@ def main():
 def recipe_loop():
     take_input = True
     while take_input:
-        request = input('Request a breakdown by entering the name of an Archnemesis modifier, or type "quit":')
-        if request in all_names:
-            if request in component_formulas:
+        request = clean_input(input('Request a breakdown by entering the name '
+                                     'of an Archnemesis modifier, or type "quit":\n'))
+        if request in name_lookup_table:
+            if name_lookup_table[request] in component_formulas:
                 result = get_subcomponents(component_formulas, request)
                 while True:
-                    result_format = input('Would you like this as a "tree" or a "list"?')
+                    result_format = input('Would you like this as a "tree" or a "list"?\n')
                     if result_format == 'tree':
                         print('Here is the full breakdown to create your component:')
                         print(json.dumps(result, indent=2))
@@ -58,9 +61,14 @@ def recipe_loop():
 def usage_loop():
     take_input = True
     while take_input:
-        request = input('Request the usages by entering the name of an Archnemesis modifier, or type "quit":')
-        if request in all_names:
-            print(json.dumps(family_tree[request], indent=2))
+        request = clean_input(input('Request the usages by entering the name of '
+                                     'an Archnemesis modifier, or type "quit":\n'))
+        if request in name_lookup_table:
+            result = family_tree[name_lookup_table[request]]
+            if result:
+                print(json.dumps(result, indent=2))
+            else:
+                print("No further usages for that component.")
         elif request != 'quit':
             print('I\'m sorry, that is not a valid name from the list. Please try again.')
         else:
@@ -72,6 +80,7 @@ def setup():
     global component_formulas
     global all_names
     global family_tree
+    global name_lookup_table
     with open('resources/component_formulas.json') as json_file:
         component_formulas = json.load(json_file)
 
@@ -80,6 +89,9 @@ def setup():
 
     with open('resources/family_tree.json') as json_file:
         family_tree = json.load(json_file)
+
+    with open('resources/name_lookup_table.json') as json_file:
+        name_lookup_table = json.load(json_file)
 
 
 def get_subcomponents(cfs: typing.Dict[str, typing.List[str]], request: str) -> typing.Dict[str, dict]:
@@ -92,6 +104,8 @@ def get_subcomponents(cfs: typing.Dict[str, typing.List[str]], request: str) -> 
     :return: A dictionary of dictionaries is returned, with each component showing its subcomponents.
         Basic subcomponents show an empty dictionary.
     """
+    if request in name_lookup_table:
+        request = name_lookup_table[request]
     result = {}
     if request in cfs:
         for rq in cfs[request]:
@@ -136,6 +150,16 @@ def get_parents(comp_formulas: dict, names: set = None) -> dict:
             if name in v:
                 result[name][k] = result[k]
     return result
+
+
+def generate_lookup_table(original_names: set) -> dict:
+    """Takes a set of names and generates a lookup table of lowercase, stripped keys pointing to the original names."""
+    return {clean_input(name) : name for name in original_names}
+
+
+def clean_input(name: str) -> str:
+    """Processes a name, stripping non-letter characters and lower-casing them."""
+    return re.sub(r'[^a-z]+', '', name.lower())
 
 
 if __name__ == '__main__':
